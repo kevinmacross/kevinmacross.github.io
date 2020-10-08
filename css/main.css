@@ -1,1 +1,26 @@
+* {
+  font-family: 'Rubik', sans-serif;
+}
 
+.weatherHere{
+  margin: 2%;
+  display: grid;
+  grid-template-columns: 1fr 25% 1fr;
+}
+
+.title{
+  color: #799BAF;
+  font-size: 2.2em;
+  margin: 0;
+}
+
+.main{
+  margin: 2%;
+}
+
+.mainCity{
+  margin: 0 0;
+	margin-bottom: 8%;
+  font-size: 2.4em;
+	font-weight: bold;
+}
