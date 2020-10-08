@@ -1,26 +1,57 @@
 * {
-  font-family: 'Rubik', sans-serif;
+	font-family: 'Rubik', sans-serif;
 }
 
-.weatherHere{
-  margin: 2%;
-  display: grid;
-  grid-template-columns: 1fr 25% 1fr;
+.weatherHere {
+  	margin: 2%;
+ 	display: grid;
+  	grid-template-columns: 1fr 25% 1fr;
 }
 
-.title{
-  color: #799BAF;
-  font-size: 2.2em;
-  margin: 0;
+.title {
+  	color: #799BAF;
+  	font-size: 2.2em;
+  	margin: 0;
 }
 
-.main{
-  margin: 2%;
+.main {
+  	margin: 2%;
 }
 
-.mainCity{
-  margin: 0 0;
-	margin-bottom: 8%;
-  font-size: 2.4em;
-	font-weight: bold;
+.mainCity {
+  	margin: 0 0;
+  	margin-bottom: 8%;
+  	font-size: 2.4em;
+  	font-weight: bold;
+}
+
+.info li {
+  	margin-bottom: 1%;
+}
+
+.renew {
+  	background-color: #ACC1CE;
+  	color: #5A7789;
+  	border-radius: 5px;
+  	border: none;
+  	font-size: 1.2em;
+}
+
+.cities {
+  	display: grid;
+  	grid-template-columns: 1fr 1fr;
+  	grid-gap: 1%;
+}
+
+.cityWeather {
+  	display: grid;
+  	grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.option {
+  	display: grid;
+  	grid-template-columns: 1fr 1fr;
+  	background-color: #A6B0B6;
+  	color: white;
+  	font-size: 0.8em;
 }
