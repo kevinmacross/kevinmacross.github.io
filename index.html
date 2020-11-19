@@ -1,285 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Weather</title>
-      <script src="https://kit.fontawesome.com/6d5352cf1b.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="css/main.css">
 </head>
-      
-<body>  
-      <header class="weatherHere">
-              <h1 class="title">Погода здесь</h1>
-              <button class="renew" type="button" name="renewLocation">Обновить геолокацию</button>
-              <button class="btn-renew"><i class="fas fa-sync fa-3x" aria-hidden="true"></i></button>
+
+<body>
+      <header class="weather-top">
+            <h1 class="weather-top-name">Погода здесь</h1>
+            <form method="get" name="updateLocation">
+                  <button class="update-btn" type="button" name="updateLocation">Обновить геолокацию</button>
+                  <button class="update-btn-img" type="button" name="updateLocation">
+                        <img src="images/location-update.png" class="update-img" alt="update"/>
+            </button>
+            </form>     
       </header>
-      
+
       <main class="main">
-            <div class="mainInfo">
-                  <div class="mainCity">
-                        <h3>Saint-Petersburg</h3>
-                        <div class="weatherMain">
-                              <i class="fa fa-sun-o fa-4x" aria-hidden="true"></i>
-                              <p class="mainTemp">8°C</p>
-                        </div>
-                  </div>
-               
-                  <ul class="info">
-                        <li class="option">
-                              <h4>Ветер</h4>
-                              <p>Moderate breeze, 6.0 m/s, North-northwest</p>
-                        </li>
-
-                        <li class="option">
-                              <h4>Облачность</h4>
-                              <p>Broken clouds</p>
-                        </li>
-
-                        <li class="option">
-                              <h4>Давление</h4>
-                              <p>1013 hpa</p>
-                        </li>
-
-                        <li class="option">
-                              <h4>Влажность</h4>
-                              <p>52%</p>
-                        </li>
-
-                        <li class="option">
-                              <h4>Координаты</h4>
-                              <p>[59.88, 30.42]</p>
-                        </li>
-                  </ul>
-            </div>
-                  
+            <section class="main-city-info"></section>
             <section class="favorite">
-                  <div class="fav">
+                  <div class="favorite-top">
                         <h2>Избранное</h2>
-                        <div class="add-city">
-                              <input class="input-city" type="text" placeholder="Добавить новый город">
-                              <button type="button" name="button" class="btn"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
+                        <div>
+                              <form method="get" name="addNewCity" class="add-new-city">
+                                    <input name="newCityName" class="new-city" type="text" placeholder="Добавить новый город">
+                                    <input type="submit" value="+" class="add-btn">
+                              </form>
                         </div>
                   </div>
-                 
-                  <ul class="cities">
 
-                        <li class="city">
-                              <div class="cityWeather">
-                                    <h3>Moscow</h3>
-                                    <p class="temp">5°C</p>
-                                    <i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i>
-                                    <button class="btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
-                              </div>
-
-                              <ul class="info">
-                                    <li class="option">
-                                          <h4>Ветер</h4>
-                                          <p>Moderate breeze, 6.0 m/s, North-northwest</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Облачность</h4>
-                                         <p>Broken clouds</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Давление</h4>
-                                         <p>1013 hpa</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Влажность</h4>
-                                          <p>52%</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Координаты</h4>
-                                          <p>[59.88, 30.42]</p>
-                                    </li>
-                              </ul>
-                        </li>
-                        
-                        <li class="city">
-                              <div class="cityWeather">
-                                    <h3>Moscow</h3>
-                                    <p class="temp">5°C</p>
-                                    <i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i>
-                                    <button class="btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
-                              </div>
-
-                              <ul class="info">
-                                    <li class="option">
-                                          <h4>Ветер</h4>
-                                          <p>Moderate breeze, 6.0 m/s, North-northwest</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Облачность</h4>
-                                         <p>Broken clouds</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Давление</h4>
-                                         <p>1013 hpa</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Влажность</h4>
-                                          <p>52%</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Координаты</h4>
-                                          <p>[59.88, 30.42]</p>
-                                    </li>
-                              </ul>
-                        </li>
-                        
-                        <li class="city">
-                              <div class="cityWeather">
-                                    <h3>Moscow</h3>
-                                    <p class="temp">5°C</p>
-                                    <i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i>
-                                    <button class="btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
-                              </div>
-
-                              <ul class="info">
-                                    <li class="option">
-                                          <h4>Ветер</h4>
-                                          <p>Moderate breeze, 6.0 m/s, North-northwest</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Облачность</h4>
-                                         <p>Broken clouds</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Давление</h4>
-                                         <p>1013 hpa</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Влажность</h4>
-                                          <p>52%</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Координаты</h4>
-                                          <p>[59.88, 30.42]</p>
-                                    </li>
-                              </ul>
-                        </li>
-                        
-                        <li class="city">
-                              <div class="cityWeather">
-                                    <h3>Moscow</h3>
-                                    <p class="temp">5°C</p>
-                                    <i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i>
-                                    <button class="btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
-                              </div>
-
-                              <ul class="info">
-                                    <li class="option">
-                                          <h4>Ветер</h4>
-                                          <p>Moderate breeze, 6.0 m/s, North-northwest</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Облачность</h4>
-                                         <p>Broken clouds</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Давление</h4>
-                                         <p>1013 hpa</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Влажность</h4>
-                                          <p>52%</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Координаты</h4>
-                                          <p>[59.88, 30.42]</p>
-                                    </li>
-                              </ul>
-                        </li>
-                        
-                        <li class="city">
-                              <div class="cityWeather">
-                                    <h3>Moscow</h3>
-                                    <p class="temp">5°C</p>
-                                    <i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i>
-                                    <button class="btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
-                              </div>
-
-                              <ul class="info">
-                                    <li class="option">
-                                          <h4>Ветер</h4>
-                                          <p>Moderate breeze, 6.0 m/s, North-northwest</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Облачность</h4>
-                                         <p>Broken clouds</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Давление</h4>
-                                         <p>1013 hpa</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Влажность</h4>
-                                          <p>52%</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Координаты</h4>
-                                          <p>[59.88, 30.42]</p>
-                                    </li>
-                              </ul>
-                        </li>
-                        
-                        <li class="city">
-                              <div class="cityWeather">
-                                    <h3>Moscow</h3>
-                                    <p class="temp">5°C</p>
-                                    <i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i>
-                                    <button class="btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
-                              </div>
-
-                              <ul class="info">
-                                    <li class="option">
-                                          <h4>Ветер</h4>
-                                          <p>Moderate breeze, 6.0 m/s, North-northwest</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Облачность</h4>
-                                         <p>Broken clouds</p>
-                                    </li>
-
-                                    <li class="option">
-                                         <h4>Давление</h4>
-                                         <p>1013 hpa</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Влажность</h4>
-                                          <p>52%</p>
-                                    </li>
-
-                                    <li class="option">
-                                          <h4>Координаты</h4>
-                                          <p>[59.88, 30.42]</p>
-                                    </li>
-                              </ul>
-                        </li>
-                  </ul>
+                  <ul class="favorite-cities"></ul>
             </section>
       </main>
-</body>
+
+      <template id="tempCurrentCityLoader">
+            <div class="current-city-loader"></div>
+      </template>
+
+      <template id="tempFavoriteCityLoader">
+            <li class="favorite-city">
+                  <div class="current-city-loader"></div>
+            </li>
+      </template>
+
+      <template id="tempCurrentCity">
+            <div class="main-city">
+                  <h2 class="main-city-name"></h2>
+                  <div class="main-weather">
+                        <img src="" class="current-weather-img" alt="weather"/>
+                        <p class="current-degrees"></p>
+                  </div>
+            </div>
+            <ul class="info">
+                  <li class="option">
+                        <span>Ветер</span>
+                        <p></p>
+                  </li>
+                  <li class="option">
+                        <span>Облачность</span>
+                        <p></p>
+                  </li>
+                  <li class="option">
+                        <span>Давление</span>
+                        <p></p>
+                  </li>
+                  <li class="option">
+                        <span>Влажность</span>
+                        <p></p>
+                  </li>
+                  <li class="option">
+                        <span>Координаты</span>
+                        <p></p>
+                  </li>
+            </ul>
+      </template>
+
+      <template id="tempFavoriteCity">
+            <li class="favorite-city">
+                  <div class="favorite-weather">
+                        <h3 class="favorite-city-name"></h3>
+                        <p class="degrees"></p>
+                        <img src="" class="favorite-weather-img" alt="weather small"/>
+                        <button onclick="" type="button" name="button" class="delete-btn">+</button>
+                  </div>
+                  <ul class="info">
+                        <li class="option">
+                              <span>Ветер</span>
+                              <p></p>
+                        </li>
+                        <li class="option">
+                              <span>Облачность</span>
+                              <p></p>
+                        </li>
+                        <li class="option">
+                              <span>Давление</span>
+                              <p></p>
+                        </li>
+                        <li class="option">
+                              <span>Влажность</span>
+                              <p></p>
+                        </li>
+                        <li class="option">
+                              <span>Координаты</span>
+                              <p></p>
+                        </li>
+                  </ul>
+            </li>
+      </template>
+      </body>
+      <script src="js/script.js"></script>
+</html>
