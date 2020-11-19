@@ -2,10 +2,10 @@
 	font-family: 'Rubik', sans-serif;
 }
 
-.weatherHere {
-  	margin: 2%;
- 	display: grid;
-  	grid-template-columns: 1fr 25% 1fr;
+.weather-top-name {
+  	color: #77868a;
+ 	font-size: 2.2em;
+  	margin: 0;
 }
 
 .title {
@@ -19,33 +19,78 @@
 }
 
 .mainCity {
-  	margin: 0 0;
+  	margin: 0 0 8;
   	margin-bottom: 8%;
   	font-size: 2.4em;
   	font-weight: bold;
 }
 
-.btn {
-  	background: none;
+.add-btn {
+  	font-size: 20px;
+  	font-weight: lighter;
+  	color: white;
+  	background-color: #718288;
+  	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: none;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	text-align: center;
+	line-height: 32px;
+}
+
+.delete-btn {
+  	font-size: 20px;
+  	font-weight: lighter;
+  	color: white;
+  	background-color: #718288;
+  	width: 32px;
+  	height: 32px;
+  	border-radius: 50%;
   	border: none;
+  	margin-top: auto;
+  	margin-bottom: auto;
+  	margin-left: auto;
+  	text-align: center;
+  	line-height: 32px;
+  	transform: rotate(45deg);
+  	cursor: pointer;
 }
 
 .info li {
   	margin-bottom: 1%;
 }
 
-.renew {
+.update-btn, .update-btn-img {
   	background-color: #ACC1CE;
   	color: #5A7789;
   	border-radius: 5px;
   	border: none;
   	font-size: 1.2em;
+	cursor: pointer;
+  	height: 2em;
+  	width: 100%;
+}
+
+.update-img {
+  	max-width: 1.2em;
+  	height: auto;
+  	margin: auto;
+}
+
+.current-weather-img {
+  	max-width: 128px;
+  	height: auto;
+  	margin-top: auto;
 }
 
 .cities {
   	display: grid;
   	grid-template-columns: 1fr 1fr;
   	grid-gap: 1%;
+	grid-column-gap: 5%;
 }
 
 .cityWeather {
