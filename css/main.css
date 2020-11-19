@@ -4,7 +4,7 @@
 
 
 .weather-top-name {
-  	color: #000080;
+  	color: #9894B3;
   	font-size: 2.2em;
   	margin: 0;
 }
@@ -102,7 +102,7 @@
 .option {
   	display: grid;
   	grid-template-columns: 1fr 4fr;
-  	background-color: #a8b1b3;
+  	background-color: #D1C2D7;
   	color: white;
   	font-size: 0.8em;
 }
